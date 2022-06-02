@@ -618,6 +618,13 @@ section:first-child{
   width: 100%;
   border-top: 1px solid #fff;
   height: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.container.active {
+  height: 200px;
 }
 
 .question {
@@ -650,10 +657,9 @@ section:first-child{
   width: 100%;
   text-align: left;
   max-height: 0;
-  overflow: hidden;
   margin-top: 50px;
 }
 
 .answer.active {
-  max-height: 1;
+  max-height: 500;
 }
