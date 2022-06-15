@@ -8,7 +8,7 @@
 }
 
 body {
-  height: 2000px;
+  height: 6000px;
   background: #000;
   color: #fff;
   position: relative;
@@ -29,11 +29,15 @@ section {
   align-items: center;
   gap: 12px
 }
+.top_left p {
+  font-size: 20px;
+  font-weight: 800;
+}
 .top_img {
   width: 28px;
   height: 28px;
 }
-.top p {
+.top > p {
   font-size: 12px;
 }
 
@@ -101,34 +105,47 @@ section {
 
 #slide {
   width: 100vw;
+  height: 700px;
   margin: 0;
   position: relative;
+  overflow: hidden;
 }
 
 .slide_wrap {
-  width: 100vw;
-  position: relative;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
 }
 .slide_wrap::before {
   content: '';
   display: block;
   position: absolute;
+  z-index: 99;
   bottom: 0;
   width: 100%;
   height: 30%;
   background: linear-gradient(rgba(0,0,0,.0), rgba(0,0,0));
 }
-
+ 
 .slide_list {
+  width: 100%;
+  position: absolute;
   display: flex;
   flex-direction: column;
   height: 700px;
   justify-content: center;
-  padding: 0px 160px;
   background: url(../img/slide/s1.jpg);
   background-size: 100%;
   background-position: center center;
   background-repeat: no-repeat;
+  left: calc(100% * var(--i));
+}
+
+.list_title,
+.list_txt,
+.buttons {
+  margin-left: 160px;
 }
 
 .slide_list button {
@@ -185,6 +202,7 @@ section {
   bottom: 0;
   right: 0;
   width: 470px;
+  z-index: 999999;
 }
 
 .slide_util .play {
@@ -285,6 +303,7 @@ section {
 /* watch */
 #watching {
   margin-top: 50px;
+  margin-bottom: 100px;
 }
 
 #watching .top_img {
@@ -320,6 +339,11 @@ section {
 .watch_list:hover::before {
   opacity: 1;
   transition: .5s;
+}
+
+.watch_list:hover::before {
+  border: 1px solid #fff;
+  border-radius: 5px;
 }
 
 .watch_title,
@@ -390,4 +414,160 @@ section {
 }
 .watch_list:hover .percent::after {
   border-radius: 5px 0px 0px 5px;
+}
+
+/* hot */
+#hot {
+  margin-bottom: 150px;
+}
+
+#swiper {
+  width: 100%;
+}
+
+#hot .top_img {
+  background: url(../img/icon/popular.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.swiper-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.swiper-slide {
+  width: 230px !important;
+}
+
+.movie {
+  width: 230px;
+  height: 320px;
+  background: skyblue;
+  border-radius: 5px;
+  margin: 0;
+  margin-bottom: 22px;
+}
+
+.swiper-wrapper h2 {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.list_txt {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list_txt p {
+  font-size: 14px;
+  opacity: .5;
+}
+
+/* category */
+
+#categories {
+  margin-bottom: 150px;
+}
+
+#categories .swiper-slide {
+  width: 140px !important;
+}
+
+#categories .category{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+#categories .category > div:not(.choose) p {
+  opacity: .2;
+  font-size: 16px;
+}
+
+#categories .swiper-slide > button {
+  width: 100%;
+  padding: 9px 0px;
+  border-radius: 25px;
+  font-size: 14px;
+  background: #016CF9;
+  color: #fff;
+  background: rgba(255,255,255, .3);
+  opacity: .4;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+#categories .swiper-slide > button.choose {
+  opacity: 1;
+  background: #016CF9;
+  color: #fff;
+}
+
+.align {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.align button {
+  width: 120px;
+  padding: 9px 0px;
+  border-radius: 25px;
+  background: rgba(255,255,255, .1);
+  color: #fff;
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contents .row {
+  display: flex;
+  gap: 44px;
+  margin-bottom: 40px;
+}
+
+.contents h2 {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.viewAll {
+  width: 160px;
+  height: 42px;
+  border: 1px solid #fff;
+  border-radius: 25px;
+  text-align: center;
+  padding: 11px 0px;
+  background-color: transparent;
+  color: #fff;
+}
+
+/*  */
+
+#recent .swiper-slide {
+  width: 170px !important;
+  margin: 0 !important;
+}
+
+#recent .movie {
+  width: 170px;
+  height: 235px;
+  margin-bottom: 18px;
+  
+}
+
+#recent h2 {
+  font-size: 15px;
+}
+#recent .list_txt p {
+  font-size: 13px;
 }
