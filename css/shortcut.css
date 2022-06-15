@@ -1,0 +1,61 @@
+.sc_list .sc1 {
+
+  background: url(../img/logo/disney.png);
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.sc_list:hover .sc1 {
+  background-size: contain;
+}
+
+.sc2 {
+  background: url(../img/logo/pixar.png);
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.sc_list:hover .sc2 {
+  background-size: contain;
+}
+
+.sc3 {
+  background: url(../img/logo/marvel.png);
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.sc_list:hover .sc3 {
+  background-size: contain;
+}
+
+.sc4 {
+  background: url(../img/logo/starwars.png);
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.sc_list:hover .sc4 {
+  background-size: contain;
+}
+
+.sc5 {
+  background: url(../img/logo/ng.png);
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.sc_list:hover .sc5 {
+  background-size: contain;
+}
+
+.sc6 {
+  background: url(../img/logo/star.png);
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+.sc_list:hover .sc6 {
+  background-size: contain;
+}

@@ -1,0 +1,33 @@
+.watch_list:nth-child(1) {
+  background: url(../img/watching/w1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.watch_list:nth-child(2) {
+  background: url(../img/watching/w2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.watch_list:nth-child(3) {
+  background: url(../img/watching/w3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.watch_list:nth-child(1) .percent::after {
+  width: 60%;
+  height: 100%;
+}
+.watch_list:nth-child(2) .percent::after {
+  width: 40%;
+  height: 100%;
+}
+.watch_list:nth-child(3) .percent::after {
+  width: 90%;
+  height: 100%;
+}
