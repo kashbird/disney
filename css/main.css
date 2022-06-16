@@ -142,12 +142,6 @@ section {
   left: calc(100% * var(--i));
 }
 
-.list_title,
-.list_txt,
-.buttons {
-  margin-left: 160px;
-}
-
 .slide_list button {
   border-radius: 5px;
   color: #fff;

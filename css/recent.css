@@ -1,0 +1,60 @@
+#recent .swiper-slide:nth-child(1) .movie {
+    background: url(../img/recent/r1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#recent .swiper-slide:nth-child(2) .movie {
+    background: url(../img/recent/r2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#recent .swiper-slide:nth-child(3) .movie {
+    background: url(../img/recent/r3.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#recent .swiper-slide:nth-child(4) .movie {
+    background: url(../img/recent/r4.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#recent .swiper-slide:nth-child(5) .movie {
+    background: url(../img/recent/r5.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#recent .swiper-slide:nth-child(6) .movie {
+    background: url(../img/recent/r6.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#recent .swiper-slide:nth-child(7) .movie {
+    background: url(../img/recent/r7.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#recent .swiper-slide:nth-child(8) .movie {
+    background: url(../img/recent/r8.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#recent .swiper-slide:nth-child(9) .movie {
+    background: url(../img/recent/r9.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#recent .swiper-slide:nth-child(10) .movie {
+    background: url(../img/recent/r10.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
