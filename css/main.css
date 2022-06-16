@@ -142,6 +142,10 @@ section {
   left: calc(100% * var(--i));
 }
 
+.slide_list .buttons {
+  margin-left: 160px;
+}
+
 .slide_list button {
   border-radius: 5px;
   color: #fff;
@@ -151,6 +155,7 @@ section {
   width: 350px;
   height: 102px;
   margin-bottom: 30px;
+  margin-left: 160px;
 }
 
 .list_txt {
@@ -158,6 +163,7 @@ section {
   font-weight: 300;
   line-height: 25px;
   margin-bottom: 22px;
+  margin-left: 160px;
 }
 
 .buttons {
