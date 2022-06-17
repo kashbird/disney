@@ -8,7 +8,6 @@
 }
 
 body {
-  height: 6000px;
   background: #000;
   color: #fff;
   position: relative;
@@ -34,17 +33,19 @@ section {
   font-weight: 800;
 }
 .top_img {
-  width: 28px;
-  height: 28px;
+  width: 22px;
+  height: 22px;
 }
 .top > p {
   font-size: 12px;
+  cursor: pointer;
 }
 
 /* #nav */
 
 #nav {
-  width: 1600px;
+  margin: 0;
+  width: 100%;
   position: fixed;
   top:0;
   left: 0;
@@ -52,12 +53,17 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 99;
+  z-index: 999;
+  }
+#nav.show {
+  background:#000;
+  border-bottom: 1px solid rgba(255,255,255,.2);
 }
 
 .left {
   display: flex;
   align-items: center;
+  margin-left: 160px;
 }
 
 .logo {
@@ -81,6 +87,10 @@ section {
   opacity: .5;
 }
 
+#nav ul li:hover {
+  opacity: .9;
+}
+
 #nav ul li a {
   color: #fff;
   text-decoration: none;
@@ -91,6 +101,7 @@ section {
   align-items: center;
   gap: 20px;
   margin-left: auto;
+  margin-right: 160px;
 }
 
 .user_img {
@@ -104,11 +115,11 @@ section {
 /* slide */
 
 #slide {
-  width: 100vw;
+  width: 100%;
   height: 700px;
   margin: 0;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .slide_wrap {
@@ -140,10 +151,14 @@ section {
   background-position: center center;
   background-repeat: no-repeat;
   left: calc(100% * var(--i));
+  overflow-x: hidden;
 }
 
 .slide_list .buttons {
   margin-left: 160px;
+  position: absolute;
+  top: 71%;
+  z-index: 99;
 }
 
 .slide_list button {
@@ -163,6 +178,11 @@ section {
   font-weight: 300;
   line-height: 25px;
   margin-bottom: 22px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#slide .list_txt {
   margin-left: 160px;
 }
 
@@ -178,11 +198,23 @@ section {
   font-size: 14px;
 }
 
+.detail:hover {
+  box-shadow: 0 0 40px #016CF9;
+  transition: 0.5s;
+}
+
 .like {
   width: 90px;
   height: 50px;
   background:transparent;
   border: 1px solid #fff;
+}
+
+.like:hover {
+  border: none;
+  background: #fff;
+  color: #000;
+  transition: 0.5s;
 }
 
 .title1 {
@@ -218,7 +250,28 @@ section {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
+  animation: play-anim 2s ease-in-out infinite;
+}
+@keyframes play-anim {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+.play_img:hover {
+  animation: play-anim-hover .5s ease-in-out forwards;
+  transition: .5s;
+}
+@keyframes play-anim-hover {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
 }
 
 .play p {
@@ -287,6 +340,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;  
+  cursor: pointer;
 }
 .sc_list div {
   width: 134px;
@@ -304,6 +358,7 @@ section {
 #watching {
   margin-top: 50px;
   margin-bottom: 100px;
+  cursor: default;
 }
 
 #watching .top_img {
@@ -332,6 +387,7 @@ section {
   height: 100%;
   background: rgba(0,0,0, .8);
   opacity: 0;
+  cursor: pointer;
 }
 .watch_list:hover .watch_title,
 .watch_list:hover .watch_play,
@@ -339,6 +395,7 @@ section {
 .watch_list:hover::before {
   opacity: 1;
   transition: .5s;
+  cursor: pointer;
 }
 
 .watch_list:hover::before {
@@ -419,6 +476,7 @@ section {
 /* hot */
 #hot {
   margin-bottom: 150px;
+  cursor: default;
 }
 
 #swiper {
@@ -444,32 +502,66 @@ section {
 .movie {
   width: 230px;
   height: 320px;
-  background: skyblue;
   border-radius: 5px;
   margin: 0;
   margin-bottom: 22px;
+  position: relative;
+}
+.movie::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0, .8);
+  opacity: 0;
+}
+.movie::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: url(../img/icon/play.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 50%;
+  left:50%;
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 0;
+}
+
+.movie:hover::before {
+  opacity: .5;
+  transition: .5s;
+  cursor: pointer;
+}
+.movie:hover::after {
+  opacity: 1;
+  transition: .5s;
+  cursor: pointer;
 }
 
 .swiper-wrapper h2 {
   font-size: 18px;
   font-weight: 800;
   margin-bottom: 8px;
-}
-
-.list_txt {
-  display: flex;
-  justify-content: space-between;
+  cursor: pointer;
+  height: 42px;
 }
 
 .list_txt p {
   font-size: 14px;
   opacity: .5;
+  cursor: default;
 }
 
 /* category */
 
 #categories {
   margin-bottom: 150px;
+  cursor:default;
 }
 
 #categories .swiper-slide {
@@ -481,6 +573,11 @@ section {
   justify-content: space-between;
   margin-bottom: 40px;
   text-transform: uppercase;
+  cursor: pointer;
+}
+#categories .list:not(.choose):hover > .top_left > div,
+#categories .list:not(.choose):hover > .top_left > p {
+  opacity: .8;
 }
 
 #categories .category > div:not(.choose) p {
@@ -499,6 +596,10 @@ section {
   opacity: .4;
   font-weight: 300;
   margin-bottom: 20px;
+}
+#categories .swiper-slide > button:hover {
+  opacity: .8;
+  cursor: pointer;
 }
 
 #categories .swiper-slide > button.choose {
@@ -521,6 +622,10 @@ section {
   background: rgba(255,255,255, .1);
   color: #fff;
 }
+.align button:hover {
+  background: rgba(255,255,255,.3);
+  cursor: pointer;
+}
 
 .contents {
   display: flex;
@@ -538,6 +643,7 @@ section {
   font-size: 18px;
   font-weight: 800;
   margin-bottom: 8px;
+  height: 42px;
 }
 
 .viewAll {
@@ -550,8 +656,25 @@ section {
   background-color: transparent;
   color: #fff;
 }
+.viewAll:hover {
+  background: #fff;
+  border: none;
+  color:#000;
+  transition: .5s;
+}
 
 /*  */
+#recent {
+  margin-bottom: 100px;
+  cursor:default;
+}
+
+#recent .top_img {
+  background: url(../img/icon/history.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 #recent .swiper-slide {
   width: 170px !important;
@@ -570,4 +693,84 @@ section {
 }
 #recent .list_txt p {
   font-size: 13px;
+}
+
+
+/* ex */
+#exhibition {
+  position: relative;
+  margin-bottom: 150px;
+  overflow-x: hidden;
+}
+
+#exhibition .swiper {
+  position: absolute;
+  left: 20%;
+  top: 16%;
+}
+
+#exhibition .back {
+  width: 400px;
+  height: 600px;
+  border-radius: 15px;
+  background: url(../img/toy/backI.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+#exhibition .back::after {
+  content: '';
+  position: absolute;
+  background: linear-gradient(90deg, rgba(0,0,0,.0), rgba(0,0,0));
+  right: 0;
+  width: 50%;
+  height: 100%;
+}
+
+#exhibition .back_txt {
+  width: 338px;
+  height: 107px;
+  background: url(../img/toy/backT.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+}
+
+/* footer */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 100px;
+}
+
+footer ul{
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+footer p {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 300;
 }

@@ -1,3 +1,36 @@
+.movies .top_img {
+  background: url(../img/icon/video.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.series .top_img {
+  background: url(../img/icon/film1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.original .top_img {
+  background: url(../img/icon/check.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.search .top_img {
+  background: url(../img/icon/search.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#categories .top_img:not(.choose) {
+  opacity: .2;
+}
+
+
 #categories .row:nth-child(1) .content_list:nth-child(1) .movie {
     background: url(../img/action/a1.jpg);
     background-size: cover;
@@ -110,3 +143,7 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+
+
+
+
