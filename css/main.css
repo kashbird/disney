@@ -120,9 +120,37 @@ section {
   margin: 0;
   position: relative;
   overflow-x: hidden;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+#slide .swiper {
+  height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+
+}
+#slide .swiper-slide {
+  position: relative;
+  width: 100% !important;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-.slide_wrap {
+#slide .swiper-button-prev {
+  position: absolute;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+#slide .swiper-button-next {
+  position: absolute;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* .slide_wrap {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -138,30 +166,14 @@ section {
   height: 30%;
   background: linear-gradient(rgba(0,0,0,.0), rgba(0,0,0));
 }
- 
-.slide_list {
-  width: 100%;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  height: 700px;
-  justify-content: center;
-  background: url(../img/slide/s1.jpg);
-  background-size: 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  left: calc(100% * var(--i));
-  overflow-x: hidden;
-}
+  */
 
-.slide_list .buttons {
+
+#slide .swiper-slide .buttons {
   margin-left: 160px;
-  position: absolute;
-  top: 71%;
-  z-index: 99;
 }
 
-.slide_list button {
+#slide .swiper-slide button {
   border-radius: 5px;
   color: #fff;
 }
@@ -171,6 +183,7 @@ section {
   height: 102px;
   margin-bottom: 30px;
   margin-left: 160px;
+  margin-top: 100px;
 }
 
 .list_txt {
@@ -217,24 +230,19 @@ section {
   transition: 0.5s;
 }
 
-.title1 {
-  background: url(../img/slide/s1T.png);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-top: 100px;
-}
+
 
 .slide_util {
   margin: 0px 160px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   position: absolute;
-  bottom: 0;
+  top: 50%;
   right: 0;
   width: 470px;
-  z-index: 999999;
+  z-index: 99;
 }
 
 .slide_util .play {
@@ -277,7 +285,6 @@ section {
 .play p {
   font-size: 14px;
   font-weight: 800;
-  margin-bottom: 200px;
 }
 
 .list_button {
@@ -286,40 +293,19 @@ section {
   align-items: center;
 }
 
-.arrow {
-  width: 26px;
-  height: 26px;
-  background: url(../img/icon/arrow.png);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+.swiper-pagination {
+
 }
-.arrow.next {
-  transform: scaleX(-1);
+.swiper-pagination-bullet-active {
+  width: 25px !important;
+  border-radius: 2px !important;
+  transition: .5s;
 }
 
-.list_button ul {
-  display: flex;
-  align-items: flex-end;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  gap : 14px;
-}
+.swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+  background: white;
 
-.list_button ul li {
-  margin-bottom: 7px;
-  font-size: 16px;
-  font-weight: 300;
 }
-
-.list_button ul li.show {
-  font-size: 40px;
-  margin: 0;
-  font-weight: 800;
-  color: #016CF9;
-}
-
 
 /* shortcut */
 
