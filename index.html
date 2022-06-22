@@ -5,8 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="movies.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/movies.css">
 </head>
 <body>
   
@@ -229,12 +229,62 @@
       <div class="container">
         <div class="question">
           <div class="button"></div>
-          <p>디즈니+는 무엇인가요?</p>
+          <p>디즈니+에서 어떤 콘텐츠를 시청할 수 있나요?</p>
         </div>
         
         <div class="answer">
           <p>
-            디즈니+는 디즈니, 픽사, 마블, 스타워즈, 내셔널지오그래픽, Star의 콘텐츠를 모두 즐길 수 있는 곳입니다. 최신 공개작부터 시대를 초월한 명작과 독점 오리지널에 이르기까지 다양하고 풍성한 콘텐츠를 광고 없이 스트리밍할 수 있습니다.    
+            디즈니+는 새로운 콘텐츠를 계속해서 추가하고 있습니다.<br>
+            - 최신 공개작과 시대를 초월한 명작<br>
+            - 독점 공개하는 새로운 오리지널 영화와 시리즈<br>
+            - 흥미진진한 스페셜과 기간 한정 스트리밍되는 특별 콘텐츠<br>
+            - 그때 그 시절 추억의 작품과 인기 시리즈의 지난 시즌 에피소드<br>
+            - 스카이워커 사가 전체와 대부분의 마블 시네마틱 유니버스 작품<br>
+            - 인기 단편과 실험적인 단편<br>
+            - 다큐멘터리, 리얼리티 시리즈 등<br>
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="question">
+          <div class="button"></div>
+          <p>디즈니+를 어디에서 시청할 수 있나요?</p>
+        </div>
+        
+        <div class="answer">
+          <p>
+            디즈니+ 앱은 모바일 기기, 웹 브라우저, 게임 콘솔, 셋톱박스, 스마트 TV에서 이용할 수 있습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="question">
+          <div class="button"></div>
+          <p>디즈니+를 얼마에 이용할 수 있나요?</p>
+        </div>
+        
+        <div class="answer">
+          <p>
+            월 9,900원 또는 연 99,000원으로 디즈니+를 이용하실 수 있습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="question">
+          <div class="button"></div>
+          <p>디즈니+는 무엇을 제공하나요?</p>
+        </div>
+        
+        <div class="answer">
+          <p>
+            디즈니+는 다음을 제공합니다.<br>
+            - 광고 없는 탁월한 시청 경험<br>
+            - 최대 10대의 기기에 원하는 콘텐츠 마음껏 저장<br>
+            - 100편이 넘는 작품 고화질 4K UHD 및 HDR로 시청<br>
+            - 추가 요금 없이 최대 4대의 기기에서 동시 스트리밍<br>
           </p>
         </div>
       </div>
@@ -242,20 +292,55 @@
     </div>
   </section>
 
+  <section id="footer">
+    <div class="logo"></div>
+    <ul class="footer_list">
+      <li><a href="">디즈니+ 이용약관</a></li>
+      <li><a href="">개인정보 처리방법</a></li>
+      <li><a href="">개인정보 처리방침 부속서</a></li>
+      <li><a href="">관심 기반 광고</a></li>
+      <li><a href="">고객센터</a></li>
+      <li><a href="">다양한 시청 방법</a></li>
+      <li><a href="">디즈니+ 소개</a></li>
+      <li><a href="">통신판매업 사업자정보확인</a></li>
+    </ul>
+    <p>월트디즈니컴퍼니코리아 유한책임회사 | 대표자: 오상호 | 서울특별시 강남구 테헤란로 152, 7층 (우편번호: 06236) | Email: help@disneyplus.kr | 연락처: 080 822 1416 | 사업자등록번호: 220-81-03347 | 통신판매업 신고번호: 제2021-서울강남-05456호 |<br>
+      비디오물배급업 신고번호: 제2016-16호 | 호스팅서비스 사업자: NSOne <br>
+      <br>
+      디즈니+의 콘텐츠는 서비스 여부에 따라 달라질 수 있습니다.<br>
+      © 2022 Disney and its related entities. All Rights Reserved.</p>
+  </section>
+
   <script>
     const container = document.querySelectorAll(".container")
     const answer = document.querySelectorAll(".answer")
     const question = document.querySelectorAll(".question")
 
-    question.forEach((el) => {
-      el.addEventListener('click', showme)
+    question.forEach((el, index) => {
+      el.addEventListener('click', ()=> {
+        container[index].classList.toggle('active');
+      })
     })
 
-    function showme(event) {
-      container.forEach((event) => {
-        event.classList.toggle("active");
+    const carouselMain = document.querySelector(".carousel > .img2")
+    const slideImg = document.querySelectorAll("#star > .util > .img")
+
+
+    slideImg.forEach((el, index) => {
+      el.addEventListener('click', ()=> {
+        if(index == 0) {
+          carouselMain.className = 'img2 active0'
+        } else if (index == 1) {
+          carouselMain.className = 'img2 active1'
+        } else if (index == 2) {
+          carouselMain.className = 'img2 active2'
+        } else if (index == 3) {
+          carouselMain.className = 'img2 active3'
+        } else if (index == 4) {
+          carouselMain.className = 'img2 active4'
+        }
       })
-    }
+    })
 
   </script>
 

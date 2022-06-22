@@ -6,7 +6,6 @@
 }
 
 body {
-  height: 8000px;
   overflow-x: hidden;
   background-color: #030617;
 }
@@ -23,7 +22,7 @@ section:first-child{
   position: relative;
   width: 100vw;
   height: 100vh;
-  background: url(".../img/bg/bg.jpg");
+  background: url("../img/bg/bg.jpg");
   background-size: 150%;
   background-position: right top;
   overflow: hidden;
@@ -67,14 +66,14 @@ section:first-child{
   filter: blur(40px);
 }
 
-.logo {
+#main > .logo {
   position: absolute;
   top: 35%;
   left: 50%;
   transform: translate(-50%);
   width: 202px;
   height: 110px;
-  background: url(".../img/logo/original.png");
+  background: url("../img/logo/original.png");
   background-size: cover;
   z-index: 99;
 }
@@ -98,7 +97,7 @@ section:first-child{
   top: 70%;
   left: 49%;
   transform: translate(-50%);
-  background: url(".../img/icon/mouse.png");
+  background: url("../img/icon/mouse.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -239,10 +238,34 @@ section:first-child{
   gap: 50px;
 }
 
-#explain .img {
+#explain .exp1 .img {
   width: 40px;
   height: 40px;
-  background: url("../img/icon/film.png");
+  background: url("../img/icon/film1.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  margin-bottom: 18px;
+}
+
+#explain .exp2 .img {
+  width: 40px;
+  height: 40px;
+  background: url("../img/icon/devices.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  margin-bottom: 18px;
+}
+
+#explain .exp3 .img {
+  width: 40px;
+  height: 40px;
+  background: url("../img/icon/download.png");
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: center;
@@ -432,6 +455,38 @@ section:first-child{
   height: 500px;
   background: url("../img/bg/dropout.png");
   background-size: cover;
+  background-position: contian;
+}
+
+.carousel .img2.active0 {
+  background: url("../img/bg/dropout.png");
+  background-size: cover;
+  background-position: contian;
+  transition: .5s;
+}
+.carousel .img2.active1 {
+  background: url("../img/stillcut/stillcut1.jpg");
+  background-size: cover;
+  background-position: contian;
+  transition: .5s;
+}
+.carousel .img2.active2 {
+  background: url("../img/stillcut/stillcut2.jpg");
+  background-size: cover;
+  background-position: contian;
+  transition: .5s;
+}
+.carousel .img2.active3 {
+  background: url("../img/stillcut/stillcut3.jpg");
+  background-size: cover;
+  background-position: contian;
+  transition: .5s;
+}
+.carousel .img2.active4 {
+  background: url("../img/stillcut/stillcut4.jpg");
+  background-size: cover;
+  background-position: contian;
+  transition: .5s;
 }
 
 .carousel .img1 {
@@ -614,7 +669,7 @@ section:first-child{
 }
 
 .container {
-  padding: 20px;
+  padding: 20px 20px;
   width: 100%;
   border-top: 1px solid #fff;
   height: 30px;
@@ -623,8 +678,20 @@ section:first-child{
   transition: .5s;
 }
 
-.container.active {
-  height: 200px;
+.container:nth-child(1).active {
+  height: 180px;
+}
+.container:nth-child(2).active {
+  height: 320px;
+}
+.container:nth-child(3).active {
+  height: 110px;
+}
+.container:nth-child(4).active {
+  height: 110px;
+}
+.container:nth-child(5).active {
+  height: 150px;
 }
 
 .question {
@@ -655,11 +722,53 @@ section:first-child{
 
 .answer {
   width: 100%;
+  height: 100%;
   text-align: left;
   max-height: 0;
-  margin-top: 50px;
+  margin-top: 30px;
+  line-height: 30px;
 }
 
 .answer.active {
   max-height: 500;
+}
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 100px;
+  margin-top: 150px !important;
+}
+
+#footer ul{
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+}
+
+#footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+#footer p {
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+#footer > .logo {
+  width: 84px;
+  height: 46px;
+  background: url(../img/logo/original.png);
+  background-size: cover;
+  background-position: center;
 }

@@ -23,3 +23,4 @@ window.addEventListener("scroll", ()=> {
   mouse.style.opacity = "0"
   mouse.style.transition = ".5s"
 })
+
